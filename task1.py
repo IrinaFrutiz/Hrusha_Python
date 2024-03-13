@@ -1,7 +1,7 @@
 def algorithm(user_input):
     try:
         user_input = float(user_input)
-        return "Привет" if int(user_input) > 7 else ""
+        return "Привет" if user_input > 7 else ""
     except ValueError:
         try:
             lst = user_input.split()
