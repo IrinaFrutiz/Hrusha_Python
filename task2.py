@@ -16,7 +16,8 @@ def check_regular_bracket_sequence(sequence):
     if stack:
         stack = start_end(stack)
     index = 0
-    print("Ваша скобочная последовательность НЕправильная" if stack else "Ваша скобочная последовательность Правильная")
+    print("Ваша скобочная последовательность НЕ является правильной" if stack else "Ваша скобочная последовательность "
+                                                                                   "Правильная")
     for i in stack:
         print(Fore.GREEN + userSequence[index: i[1]], end="")
         index = i[1] + 1
@@ -52,5 +53,6 @@ def adjacent_element(stack, k=0):
 
 print("Обрабатываемые символы: {, }, [, ], ), (, <, >.", "Непарные и необрабатываемые символы символы в "
                                                          "последовательности будут отмечены красным. ", sep="\n")
+print("Пример из задания: [((())()(())]]")
 userSequence = input("Введите скобочную последовательность для проверки на правильность: ")
 check_regular_bracket_sequence(userSequence)
